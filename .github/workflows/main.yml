@@ -21,7 +21,7 @@ jobs:
 
       - name: Git
         run: |
-          cp /usr/local/bin/pslauncher .
+          cp -r /usr/local/bin/ .
           git config --global --add safe.directory $PWD
           if [ -n "$(git status --porcelain)" ]; then
             git config --global user.name "github-actions[bot]"
